@@ -1,0 +1,12 @@
+
+services:
+  - type: web
+    name: kofi-relay
+    env: node
+    plan: free
+    buildCommand: ""
+    startCommand: "node server.js"
+    autoDeploy: true
+    envVars:
+      - key: KOFI_VERIFY_TOKEN
+        sync: false
